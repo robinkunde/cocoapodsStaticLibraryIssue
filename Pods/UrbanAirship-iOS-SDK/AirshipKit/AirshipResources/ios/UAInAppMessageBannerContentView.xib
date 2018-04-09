@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UAInAppMessageBannerController"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFill" id="iN0-l3-epB" userLabel="BannerImageLeft" customClass="UAInAppMessageBannerContentView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="CwK-FL-VAk" userLabel="ContainerView">
+                    <rect key="frame" x="0.5" y="0.0" width="375" height="120"/>
+                    <subviews>
+                        <view opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="6QX-8T-8Be">
+                            <rect key="frame" x="20" y="0.0" width="120" height="121"/>
+                            <constraints>
+                                <constraint firstAttribute="width" priority="999" constant="120" id="NDK-1g-BfK"/>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="dYV-qQ-ha9"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGz-LO-0Cf" userLabel="Text Container View" customClass="UAInAppMessageTextView">
+                            <rect key="frame" x="139.5" y="0.0" width="235" height="120"/>
+                        </view>
+                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqe-vD-Gmm" userLabel="Media Padding View">
+                            <rect key="frame" x="0.0" y="120" width="120" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" id="BBN-PT-Ibf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="UGz-LO-0Cf" secondAttribute="bottom" id="1hd-i9-4dd"/>
+                        <constraint firstItem="UGz-LO-0Cf" firstAttribute="leading" secondItem="6QX-8T-8Be" secondAttribute="trailing" id="77e-hL-mqE"/>
+                        <constraint firstItem="fqe-vD-Gmm" firstAttribute="leading" secondItem="CwK-FL-VAk" secondAttribute="leading" id="JNw-FA-zu7"/>
+                        <constraint firstAttribute="bottom" secondItem="fqe-vD-Gmm" secondAttribute="bottom" id="PCC-Fe-NW1"/>
+                        <constraint firstItem="UGz-LO-0Cf" firstAttribute="top" secondItem="CwK-FL-VAk" secondAttribute="top" id="VzT-Wc-NR4"/>
+                        <constraint firstItem="fqe-vD-Gmm" firstAttribute="width" secondItem="6QX-8T-8Be" secondAttribute="width" id="ZR0-lR-Epx"/>
+                        <constraint firstItem="6QX-8T-8Be" firstAttribute="leading" secondItem="CwK-FL-VAk" secondAttribute="leading" constant="10" id="bop-Xc-D3i"/>
+                        <constraint firstItem="fqe-vD-Gmm" firstAttribute="top" secondItem="6QX-8T-8Be" secondAttribute="bottom" constant="-1" id="oCD-Dm-Mv7"/>
+                        <constraint firstAttribute="trailing" secondItem="UGz-LO-0Cf" secondAttribute="trailing" id="wGS-uT-bg9"/>
+                        <constraint firstItem="UGz-LO-0Cf" firstAttribute="leading" secondItem="CwK-FL-VAk" secondAttribute="leading" priority="998" id="zb7-Rt-ys3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="CwK-FL-VAk" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="4Jv-9y-Mbg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UGz-LO-0Cf" secondAttribute="trailing" id="Oae-Pr-DQp"/>
+                <constraint firstItem="6QX-8T-8Be" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="V2i-dD-nzR"/>
+                <constraint firstItem="CwK-FL-VAk" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Z20-Xk-qcg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="UGz-LO-0Cf" secondAttribute="top" id="ghJ-zT-FKd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="containerView" destination="CwK-FL-VAk" id="nFy-hw-pHI"/>
+                <outlet property="mediaContainerView" destination="6QX-8T-8Be" id="iCb-ko-kd9"/>
+                <outlet property="textContainerView" destination="UGz-LO-0Cf" id="gEF-ny-q9o"/>
+            </connections>
+            <point key="canvasLocation" x="-56.5" y="-30"/>
+        </view>
+        <view contentMode="scaleAspectFill" id="aln-TZ-PVT" userLabel="BannerImageRight" customClass="UAInAppMessageBannerContentView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGo-BI-V0D" userLabel="ContainerView">
+                    <rect key="frame" x="-0.5" y="0.0" width="375" height="120"/>
+                    <subviews>
+                        <view opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="VNH-yL-Bh8">
+                            <rect key="frame" x="235" y="0.0" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="CZg-ok-yNT"/>
+                                <constraint firstAttribute="width" priority="999" constant="120" id="DAA-6C-RZf"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTX-VX-8Bf" customClass="UAInAppMessageTextView">
+                            <rect key="frame" x="0.0" y="0.0" width="215.5" height="120"/>
+                        </view>
+                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y02-V2-YH8" userLabel="Media Padding View">
+                            <rect key="frame" x="235" y="120" width="120" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="250" id="603-Aq-rqh"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="GTX-VX-8Bf" secondAttribute="bottom" id="7Y6-4H-oIf"/>
+                        <constraint firstAttribute="bottom" secondItem="Y02-V2-YH8" secondAttribute="bottom" id="7pC-Sy-FrF"/>
+                        <constraint firstItem="GTX-VX-8Bf" firstAttribute="leading" secondItem="AGo-BI-V0D" secondAttribute="leading" id="9h3-md-rqW"/>
+                        <constraint firstItem="VNH-yL-Bh8" firstAttribute="top" secondItem="AGo-BI-V0D" secondAttribute="top" id="AM7-gz-kqh"/>
+                        <constraint firstItem="Y02-V2-YH8" firstAttribute="top" secondItem="VNH-yL-Bh8" secondAttribute="bottom" id="H0B-JU-7Ck"/>
+                        <constraint firstItem="VNH-yL-Bh8" firstAttribute="leading" secondItem="GTX-VX-8Bf" secondAttribute="trailing" id="YCd-rP-DJS"/>
+                        <constraint firstItem="GTX-VX-8Bf" firstAttribute="top" secondItem="AGo-BI-V0D" secondAttribute="top" id="YwI-6c-NB2"/>
+                        <constraint firstItem="Y02-V2-YH8" firstAttribute="width" secondItem="VNH-yL-Bh8" secondAttribute="width" id="hkH-Dn-gz9"/>
+                        <constraint firstAttribute="trailing" secondItem="Y02-V2-YH8" secondAttribute="trailing" constant="20" id="pHs-HL-0yZ"/>
+                        <constraint firstAttribute="trailing" secondItem="VNH-yL-Bh8" secondAttribute="trailing" constant="10" id="rWd-yr-435"/>
+                        <constraint firstAttribute="trailing" secondItem="GTX-VX-8Bf" secondAttribute="trailing" priority="998" id="wVh-Zq-u7D"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="AGo-BI-V0D" firstAttribute="height" secondItem="aln-TZ-PVT" secondAttribute="height" id="5tI-eZ-XRT"/>
+                <constraint firstItem="zbg-Ov-XQL" firstAttribute="top" secondItem="GTX-VX-8Bf" secondAttribute="top" id="8Le-RH-NUv"/>
+                <constraint firstItem="AGo-BI-V0D" firstAttribute="width" secondItem="aln-TZ-PVT" secondAttribute="width" id="Jor-6e-YpQ"/>
+                <constraint firstItem="zbg-Ov-XQL" firstAttribute="leading" secondItem="GTX-VX-8Bf" secondAttribute="leading" id="r5p-vl-hvp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="zbg-Ov-XQL"/>
+            <connections>
+                <outlet property="containerView" destination="AGo-BI-V0D" id="5im-gc-Bud"/>
+                <outlet property="mediaContainerView" destination="VNH-yL-Bh8" id="6vh-Z3-gEH"/>
+                <outlet property="textContainerView" destination="GTX-VX-8Bf" id="vMo-1q-BwP"/>
+            </connections>
+            <point key="canvasLocation" x="-56.5" y="145"/>
+        </view>
+    </objects>
+</document>
